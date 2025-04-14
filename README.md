@@ -1,13 +1,18 @@
 # Keycloak Integration with Spring Boot 3
 
-This project demonstrates how to secure a Spring Boot application using Keycloak, a powerful open-source Identity and Access Management tool.
+- This project demonstrates how to secure a Spring Boot application using Keycloak, a powerful open-source Identity and Access Management tool.
+- Keycloak is an open-source software product to allow single sign-on with identity and access management aimed
 
 ## Features
 
 - Single Sign-On (SSO) with OpenID Connect
 - Role-Based Access Control (RBAC)
 - Fine-Grained Authorization
-
+- User Federation
+- Identity Brokering
+- Social Login
+- Centralized Management and Admin console
+- Client adapters for Java, JavaScript, and other languages
 
 
 ### Keycloak Setup
@@ -21,3 +26,4 @@ This project demonstrates how to secure a Spring Boot application using Keycloak
 4. Create Roles
 5. Create Users
 6. Assign roles to users
+

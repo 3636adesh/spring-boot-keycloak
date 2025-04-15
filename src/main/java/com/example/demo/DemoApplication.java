@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,15 @@ class HelloController {
 	@GetMapping
 	public String hello() {
 		return "Hello from spring-boot and keycloak!";
+	}
+}
+
+@RestController
+class AdminController {
+
+	@PreAuthorize("hasRole('client_admin')")
+	@GetMapping("/admin")
+	public String helloAdmin() {
+		return "Hello from spring-boot and keycloak admin!";
 	}
 }
